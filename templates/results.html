@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            background-color: #dfdede;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .btn-back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align teal-text">Data Analysis Results</h1>
+        
+        <div class="section">
+            <h2 class="header center-align">Data Features</h2>
+            <div class="card">
+                <div class="card-content">
+                    <div>{{ head | safe }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="header center-align">Statistics</h2>
+            <div class="card">
+                <div class="card-content">
+                    <div>{{ description | safe }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="header center-align">Missing Values</h2>
+            <div class="card">
+                <div class="card-content">
+                    <div>{{ missing_values | safe }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="header center-align">Data Types</h2>
+            <div class="card">
+                <div class="card-content">
+                    <div>{{ data_types | safe }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="header center-align">Unique Values</h2>
+            <div class="card">
+                <div class="card-content">
+                    <div>{{ unique_values | safe }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/" class="waves-effect waves-light btn-large teal darken-3 btn-back">Upload Another File</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

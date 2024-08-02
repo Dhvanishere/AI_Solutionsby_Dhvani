@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #d0d5da;
+        }
+        .container {
+            margin-top: 60px;
+        }
+        .header {
+            color: #052649;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #4530a5;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #1c002e;
+        }
+        .alert-custom {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Upload Data for Analysis</h1>
+        
+        <!-- Display a success or error message if needed -->
+        <!-- <div class="alert alert-custom" role="alert">
+            Please upload a valid CSV file.
+        </div> -->
+        
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Choose File:</label>
+                <input type="file" class="form-control-file" id="file" name="file" required>
+            </div>
+            <button type="submit" class="btn btn-custom btn-lg">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
